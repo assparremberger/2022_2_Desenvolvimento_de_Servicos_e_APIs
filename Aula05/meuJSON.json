@@ -1,0 +1,14 @@
+{
+    "nome":"Adalto" ,
+    "idade": 36,
+    "conjuge" : { "nome": "Suzy" , "idade": 39 } ,
+    "filhos" : [
+        { "nome": "Júlia", "idade": 13 } ,
+        { "nome": "Pedro", "idade": 5 }
+    ],
+    "formaturas" : [ 2006 , 2013 , 2017 ] ,
+    "local_formatura" : ["Capão da Canoa", "Torres", "SL"],
+    "casado": true ,
+    "altura" : 1.75 ,
+    "endereco" : null
+}

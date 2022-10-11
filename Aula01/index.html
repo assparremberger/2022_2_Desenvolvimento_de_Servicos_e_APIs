@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Aula01 - JavaScript</title>
+</head>
+<body>
+	<div id="minhaDiv">
+		Oi
+	</div>
+
+	<hr>
+	<div id="divLinha">
+		<input type="text" class="txtNome" placeholder="Digite o nome do produto..." />
+		<input type="text" class="txtPreco" placeholder="Digite o preço do produto..." />
+		<button onclick="adicionar()" >Adicionar</button>
+		<br><br>
+
+	</div>
+	
+	<h1>Lista de Compras</h1>
+	<div id="divProdutos"></div>
+	<div id="divTotal"></div>
+	
+	<script>
+
+		function adicionar(){
+			var divProdutos = document.getElementById("divProdutos");
+			var nomes = document.getElementsByClassName('txtNome');
+			console.log(nomes);
+			var precos = document.getElementsByClassName('txtPreco');
+			var conteudo = "<br>";
+			
+			var cont = 0;
+			var soma = 0.0;
+			nomes.forEach(txtnome => {
+				conteudo += txtnome.value + " - R$ " + precos[cont].value;
+				soma += parseFloat( precos[cont].value );
+				cont ++;
+			});
+			divProdutos.innerHTML = conteudo;
+			document.getElementById("divTotal").innerHTML = "Total: R$ "+ soma;
+		
+			var divLinha = document.getElementById("divLinha");
+			var nome = document.createElement('input');
+			nome.setAttribute("class", "txtnome");
+			divLinha.appendChild( nome );
+			// divLinha.appendChild()
+			// divLinha.innerHTML += '<input type="text" class="txtNome" placeholder="Digite o nome do produto..." /> ';
+			// divLinha.innerHTML += '<input type="text" class="txtPreco" placeholder="Digite o preço do produto..." />';
+			// divLinha.innerHTML += '<button onclick="adicionar()" >Adicionar</button>';
+			divLinha.innerHTML += '<br><br>';
+		}
+
+		// var mDiv = document.getElementById("minhaDiv");
+		// mDiv.innerHTML = "<u>Olá</u>";
+		// //	mDiv.innerText = "<u>Olá</u>";
+		// // document.write("Bom <b>dia!</b>");
+		// // window.alert("Sejam bem-vindos!");
+		// // alert("Tudo bem?");
+		// console.log("Estou no console");
+
+
+		// var x = 2*5;
+		// const PI = 3.1452;
+		//PI = 1.5;
+		//document.write( PI );
+
+		
+
+	</script>
+
+</body>
+</html>
