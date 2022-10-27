@@ -1,0 +1,19 @@
+{
+  "name": "dir",
+  "version": "1.0.0",
+  "description": "API da Lojinha",
+  "main": "server.js",
+  "dependencies": {
+    "knex": "^2.3.0",
+    "mysql": "^2.18.1",
+    "restify": "^8.6.1",
+    "restify-errors": "^8.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Adalto Selau Sparremberger",
+  "license": "ISC"
+}
